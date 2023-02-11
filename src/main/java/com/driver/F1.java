@@ -3,12 +3,13 @@ package com.driver;
 public class F1 extends Car {
 
     public F1(String name, boolean isManual) {
-        super(name,4,0,6,isManual,"type",1);
+        super(name,4,2,6,isManual,"type",2);
         //Use arbitrary values for parameters which are not mentioned
     }
 
     public void accelerate(int rate){
         int newSpeed = 0; //set the value of new speed by using currentSpeed and rate
+        newSpeed = getCurrentSpeed()+rate;
         /**
          * speed 0: gear 1
          * speed 1-50: gear 1
